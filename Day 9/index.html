@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+</head>
+<body>
+   
+    <div>
+      <!-- Task 1 -->
+        <h1 id="text-change">Hello World</h1>
+        </div>
+        <div id="bg-color">
+            <!-- Task 2 -->
+             <h1 >color change</h1>
+        </div>
+
+       <ul id="add">
+
+       </ul>
+       <li id="del">hello</li>
+
+       <ul id="main">
+        <li id="one">li 1</li>
+        <li id="two">li 2</li>
+        <li id="three">li 3</li>
+        <li id="four">li 4</li>
+        <li id="five">li 5</li>
+       </ul>
+
+       <h1 style="background-color: yellow;" id="change-style">hello</h1>
+ 
+       <p id="changeMe">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore, rerum blanditiis illum sed laborum mollitia animi adipisci? Quam sed perferendis iusto repellat soluta fuga ipsam numquam suscipit eligendi excepturi?
+       </p>
+      
+       <button id="btn" style="border: 4px solid; border-color: brown;">it will change its border color on mouseover</button>
+
+    <script>
+        // Task 1
+
+        document.getElementById("text-change").innerText = "Day 9 of 30 days challange of javaScript";
+
+
+        // Task 2
+
+        const bgColorDiv = document.getElementById("bg-color");
+        bgColorDiv.style.backgroundColor = '#0097fd';
+
+
+        // Task 3
+
+        const newDiv = document.createElement("div");
+        newDiv.textContent = "div child added to body";
+        document.body.appendChild(newDiv);
+
+
+        // Task 4
+
+        const ul = document.getElementById('add')
+        const addLi = document.createElement("li")
+        addLi.textContent = "new li added to ul"
+        ul.appendChild(addLi)
+
+
+        // Task 5
+
+        const delt = document.getElementById('del')
+        delt.remove()
+
+
+        //Task 6
+
+        const rem = document.getElementById('main')
+        const child = document.getElementById('five')
+        const remove =  rem.removeChild(child)
+
+
+        // Task 8
+        
+        const change = document.getElementById('change-style').style = null
+        const addStyle = document.getElementById('change-style').style.color = "blue"
+
+
+        // Task 9
+
+        const changeMe = document.getElementById('changeMe')
+        changeMe.addEventListener('click',()=>{
+            changeMe.textContent = "text is changed on click event"
+        })
+
+
+        // Task 10 
+
+        const changeBcolor = document.getElementById('btn')
+        changeBcolor.addEventListener('mouseover',()=>{
+            changeBcolor.style.borderColor = "yellow"
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
