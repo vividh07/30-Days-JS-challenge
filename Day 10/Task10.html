@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol style="background-color: salmon;">
+        <li id="maths">maths</li>
+        <li id="science">science</li>
+        <li id="sst">sst</li>
+        <li id="hindi">hindi</li>
+        <li id="skt">skt</li> 
+    </ol>
+
+    <h1 id="result"></h1>
+
+    <script>
+         const ol=document.querySelector('ol');
+         const result=document.querySelector('#result');
+
+         const li=document.createElement('li');
+         li.id="computer";
+         li.innerText="computers";
+         ol.appendChild(li);
+         
+        ol.addEventListener('click',(e)=>{
+            if(e.target.id == "maths"){
+                result.textContent=e.target.id;
+            }
+            else if(e.target.id == "science"){
+                result.textContent=e.target.id;
+            }
+            else if(e.target.id == "sst"){
+                result.textContent=e.target.id;
+            }
+            else if(e.target.id == "hindi"){
+                result.textContent=e.target.id;
+            }
+            else if(e.target.id == "skt"){
+                result.textContent=e.target.id;
+            }
+        });
+    </script>
+    
+</body>
+</html>

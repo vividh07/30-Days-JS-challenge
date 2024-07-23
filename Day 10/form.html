@@ -1,0 +1,32 @@
+<!-- Task 7 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10</title>
+  </head>
+  <body>
+    <div>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname"  /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname"  /><br /><br />
+        <input type="submit" value="Submit" id="stop" />
+      </form>
+    </div>
+
+    <script>
+        const stopDefault = document.getElementById("stop");
+        stopDefault.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fname').value
+            const lastname = document.getElementById('lname').value
+       console.log(name);
+       console.log(lastname);
+      });
+    </script>
+  </body>
+</html>

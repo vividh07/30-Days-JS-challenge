@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="list">   
+            <li>li number 1</li>
+            <li>li number 2</li>
+            <li>li number 3</li>
+            <li>li number 4</li>
+            <li>li number 5</li>
+        </ul>
+    </div>
+
+
+    <script>
+        const data = document.getElementById('list')
+        data.addEventListener('click',(e)=>{
+            console.log(`you clicked on ${e.target.innerText}`);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+    <style>
+        #mousehover{
+            background-color: aqua;
+            width: 300px;
+        }
+    </style>
+</head>
+<body> 
+    <!-- Task 1 -->
+    <div>
+        <h1>Click on button to change this text</h1>
+        <button id="change-text">click</button>
+    </div>
+
+
+<!-- Task 3 and Task 4 -->
+    <div>
+        <h1 id="mousehover">hover to change the background color</h1>
+    </div>
+
+    <!-- Task 5 -->
+     <div>
+        <input type="text" name="" id="input">
+     </div>
+
+     <!-- Task 6 -->
+
+<div>
+    <input type="text" name="" id="valueUp">
+</div>
+
+    <script>
+        // Task 1
+            const change = document.getElementById('change-text')
+           change.addEventListener('click',()=>{
+            const text = document.querySelector('h1')
+            text.innerHTML = "text changed"
+           })
+
+
+        //  Task 3
+           const bgChange = document.getElementById('mousehover')
+           bgChange.addEventListener('mouseover',()=>{
+               bgChange.style.backgroundColor = 'red'
+           })
+
+
+         // Task 4
+           const resetBg = document.getElementById('mousehover')
+           resetBg.addEventListener('mouseout',()=>{
+            bgChange.style.backgroundColor = ''
+           })
+
+
+           // Task 5
+
+           const keyPress = document.getElementById('input')
+           keyPress.addEventListener('keydown',(e)=>{
+            console.log(e.key)
+           })
+
+           // Task 6
+
+           const value = document.getElementById('valueUp')
+           value.addEventListener('keyup',(e)=>{
+            console.log(e.target.value);
+           })
+           
+    </script>
+</body>
+</html>
